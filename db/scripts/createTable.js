@@ -1,6 +1,6 @@
 import query from "../index.js";
 
-const sqlString = `CREATE TABLE IF NOT EXISTS products (id SERIAL PRIMARY KEY, title TEXT, price DECIMAL, description TEXT, image TEXT, rating DECIMAL);`;
+const sqlString = `CREATE TABLE IF NOT EXISTS products (id SERIAL PRIMARY KEY, title TEXT, price DECIMAL, description TEXT, category TEXT, image TEXT, rating DECIMAL);`;
 
 async function createTable() {
   const result = await query(sqlString);

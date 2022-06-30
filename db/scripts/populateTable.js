@@ -6,6 +6,7 @@ async function populateTable() {
     const title = products[i].title;
     const price = products[i].price;
     const description = products[i].description;
+    const category = products[i].category;
     const image = products[i].image;
     const rating = products[i].rating;
     const result = await query(
