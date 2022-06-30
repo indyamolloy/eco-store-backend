@@ -10,8 +10,8 @@ async function populateTable() {
     const image = products[i].image;
     const rating = products[i].rating;
     const result = await query(
-      `INSERT INTO products (title, price, description, image, rating) VALUES ($1, $2, $3, $4, $5);`,
-      [title, price, description, image, rating]
+      `INSERT INTO products (title, price, description, category, image, rating) VALUES ($1, $2, $3, $4, $5, $6);`,
+      [title, price, description, category, image, rating]
     );
     console.log(result, "Table populated");
   }
